@@ -1,0 +1,423 @@
+body {
+	margin: auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+    background-color: #fffef8;
+}
+
+.edit-mode {
+	height: 59px;
+	background-color: #000;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: #fff;
+	display: none;
+}
+
+.edit-mode.active {
+	display: flex;
+}
+
+.edit-mode.active + .navbar {
+	margin: 38px auto 50px;
+}
+
+.edit-mode i {
+   margin-right: 12px;
+}
+
+main {
+	max-width: 1140px;
+	margin: 0px auto;
+}
+
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#portfolio header {
+	position: relative;
+}
+
+.edit {
+	position: absolute;
+    font-family: Work Sans, sans-serif;
+	left: 50%;
+	top: calc(50% + 2px);
+	transform: translateY(-50%) translateX(126.5px);
+	font-size: 14px;
+	border: none;
+    background-color: #fffef8;
+	cursor: pointer;
+}
+
+.edit.active {
+	display: block;
+}
+
+.edit:hover {
+   font-weight: 600;
+}
+
+.edit i {
+	pointer-events: none;
+}
+
+.filterBtn-group {
+	display: flex;
+	gap: 10px;
+	margin: 0 auto 50px;
+	width: max-content;
+}
+
+.filter-btn {
+	min-width: 100px;
+	font-family: Syne, sans-serif;
+	font-size: 16px;
+	padding: 9px;
+	text-align: center;
+	border-radius: 60px;
+	border: 1px solid #1D6154;
+	font-weight: 700;
+	color: #1D6154;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.filter-btn.active {
+	background-color: #1D6154;
+	color: #fff;
+}
+
+.filter-btn:hover {
+	background-color: #0e2f28;
+	color: #fff;
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+    margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+button[type="submit"]{
+	display: block;
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 179px;
+	height: 36px;
+	text-align: center;
+	border-radius: 60px ;
+	margin: 40px auto;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover{
+	background-color: #0e2f28;
+}
+
+/*     modal window       */
+
+.background-modal-window {
+	background-color: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	width: 100vw;
+    height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.modal-window {
+	position: relative;
+	width: 100%;
+	max-width: 630px;
+	height: 100%;
+    max-height: 688px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.modal-window section {
+	margin: 0;
+}
+
+.close-window-btn {
+	font-size: 12px;
+	position: absolute;
+	top: 32px;
+	right: 36px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.modal-window h2 {
+	font-size: 26px;
+	font-weight: 400;
+	font-family: 'Work Sans', sans-serif;
+	color: #000;
+	margin: 60px auto 52px;
+	text-align: center;
+}
+
+.modal-window button i {
+	pointer-events: none;
+}
+
+.modal-window-gallery {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.container-gallery {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	width: 100%;
+	max-width: 421px;
+    gap: 29px 9px;
+	margin: 0 auto;
+}
+
+.container-gallery div {
+	position: relative;
+}
+
+.container-gallery button {
+	position: absolute;
+	height: 17px;
+	width: 17px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	border: none;
+	cursor: pointer;
+	top: 6px;
+	right: 5px;
+}
+
+.container-gallery i {
+	color: #fff;
+	font-size: 10px;
+}
+
+.container-gallery img {
+	width: 100%;
+	height: 100%;
+}
+
+.line {
+	width: 100%;
+	max-width: 420px;
+	height: 1px;
+	background-color: #b3b3b3;
+}
+
+.modal-window-gallery .line {
+	margin: 67px auto 38px;
+} 
+
+.modal-window-add-image .line {
+	margin: 47px auto 32px;
+}
+
+.send-image-btn, .add-image-btn {
+	min-width: 237px;
+	display: block;
+	font-family: 'Syne', sans-serif;
+	padding: 10px;
+	text-align: center;
+	border-radius: 60px;
+	cursor: pointer;
+	margin: 37px auto;
+    background-color: #1D6154;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	border: none;
+}
+
+.send-image-btn.disabled {
+	background-color: #a7a7a7;
+	cursor: auto;
+}
+
+.modal-window-add-image {
+	display: none;
+}
+
+.return-btn {
+	font-size: 18px;
+	position: absolute;
+	top: 32px;
+	left: 36px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.modal-window-add-image form {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 420px;
+}
+
+.import-new-image {
+	background-color: #e8f1f6;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 22.5px 19px 19px;
+	border-radius: 3px;
+	margin-bottom: 30px;
+}
+
+.preview-background {
+	background-color: #e8f1f6;
+	display: none;
+	justify-content: center;
+	border-radius: 3px;
+	margin-bottom: 30px;
+	height: 169px;
+	width: 100%;
+}
+
+.preview-background .preview {
+	display: none;
+	width: 129px;
+	height: 100%;
+	object-fit: cover;
+}
+
+.input-group-image {
+	margin: 13px 0 7px;
+    min-width: 173px;
+	position: relative;
+	text-align: center;
+	color: #306685;
+	background-color: #cbd6dc;
+	border-radius: 50px;
+}
+
+label[for="imageInput"] {
+	padding: 10px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.input-group-image input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	white-space: nowrap;
+}
+
+.valid-format {
+	font-size: 10px;
+	text-align: center;
+}
+
+.fa-image {
+	color: #b9c5cc;
+	font-size: 60px;
+}
+
+.modal-window .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-window .input-group label {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.modal-window .input-group input, .modal-window .input-group select {
+	height: 51px;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.modal-window .input-group input:first-of-type {
+	margin-bottom: 21px;
+}

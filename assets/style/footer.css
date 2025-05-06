@@ -1,0 +1,11 @@
+footer {
+	width: 100%;
+	background-color: #fff;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em;
+	height: 60px;
+}
