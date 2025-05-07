@@ -75,6 +75,7 @@ main {
 	border: none;
     background-color: #fffef8;
 	cursor: pointer;
+	display: none;
 }
 
 .edit.active {
